@@ -1,6 +1,11 @@
 """Цикл агента з перевірками викликів."""
+import sys
+from pathlib import Path
+
 from langfuse import observe
 from langfuse.openai import OpenAI
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[4]))  # корінь репо
 
 import config
 from schemas import SCHEMAS
