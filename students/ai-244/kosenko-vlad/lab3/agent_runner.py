@@ -7,6 +7,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[4]))  # корінь р�
 
 from agent import run_agent
 from utils.lab_logger import custom_logger
+
+from langfuse import get_client, propagate_attributes
 import config
 
 logger = custom_logger(config.LAB_LOGFILE_NAME)
